@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-df = pd.read_csv("D:/pathological/DEA/response/result/missf0911.csv",index_col=0,header=0)
+df = pd.read_csv("missf0911.csv",index_col=0,header=0)
 
 
 plt.rcParams['font.family'] = 'sans-serif'
@@ -57,5 +57,5 @@ ax.text(-0.33,1.4,"-log$_{10}$(0.05)",fontsize=8, alpha=0.7)
 ax.set_ylabel('-log$_{10}$(p-value)',fontsize=13)
 ax.set_xlabel('log$_{2}$(Fold change)',fontsize=13)  #fontweight='bold',
 #ax.set_title('Volcano Plot of RS genes -- missf',y=1,fontweight='bold',fontsize=15)
-#ax.figure.savefig("D:/pathological/machine_learning_image/featureselection/cox/B1feature_volcano_zoom.png",dpi=800,bbox_inches='tight')
+#ax.figure.savefig("B1feature_volcano_zoom.png",dpi=800,bbox_inches='tight')
 

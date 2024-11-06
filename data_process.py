@@ -14,8 +14,8 @@ import os
 import pandas as pd
 import numpy as np
 
-luadpath = "D:/pathological/radiomics/lusc_feature.csv"
-#luscpath = "D:/pathological/radiomics/luad.csv"
+luadpath = ".csv"
+#luscpath = ".csv"
 
 luad = pd.read_csv(luadpath, index_col=0, header=0)
 #lusc = pd.read_csv(luscpath, index_col=0, header=0)
@@ -58,7 +58,7 @@ for i in range (counts):
     
     
 result = pd.DataFrame(patient_feature,index=new_index,columns=new_feature)
-result.to_csv("D:/pathological/radiomics/lusc_feature_fin.csv")
+result.to_csv("lusc_feature_fin.csv")
 
 
 
@@ -71,7 +71,7 @@ import pandas as pd
 import numpy as np
 
 
-path = "D:/pathological/radiomics/lusc1030.csv"
+path = "lusc1030.csv"
 
 df = pd.read_csv(path, index_col=0, header=0)
 
@@ -88,7 +88,7 @@ for img in img_name:
 
 df['patient']=imgid
 
-df.to_csv("D:/pathological/radiomics/lusc.csv")
+df.to_csv("lusc.csv")
 
 
 #%%
@@ -99,7 +99,7 @@ import os
 import pandas as pd
 import numpy as np
 
-path = "D:/pathological/radiomics/lusc111.csv"
+path = "lusc.csv"
 df = pd.read_csv(path, index_col=0, header=0)
 
 start = 0
@@ -127,7 +127,7 @@ for i in range(counts):
     new_index.append(fin_name)
     
 result = pd.DataFrame(feature_mean,index=new_index,columns=featurename)
-result.to_csv("D:/pathological/radiomics/lusc_feature.csv")
+result.to_csv("lusc_feature.csv")
 
 
 

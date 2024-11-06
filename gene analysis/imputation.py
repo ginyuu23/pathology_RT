@@ -9,7 +9,7 @@ from missingpy import MissForest
 import warnings
 warnings.simplefilter('ignore', FutureWarning)
 
-df_incom = pd.read_csv("D:/pathological/gene_data/expression_drop80.csv",header=0,index_col=0)
+df_incom = pd.read_csv("expression_drop80.csv",header=0,index_col=0)
 
 data = df_incom.to_numpy(dtype=float)
 
@@ -19,6 +19,6 @@ imputer = MissForest(max_iter=50, decreasing=True,
                      max_features=1, oob_score=True)
 full=imputer.fit_transform(data)
 
-np.savetxt('D:/pathological/gene_data/processed/expression_missf0907.csv',full,delimiter=',')
+np.savetxt('expression_missf0907.csv',full,delimiter=',')
 
 print("finished")

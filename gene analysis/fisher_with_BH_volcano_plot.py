@@ -22,7 +22,7 @@ R01-001 | short |  10.1  |  12.3  | ... |
 R01-002 | long  |  12.1  |  99.3  | ... |
 ---------------------------------------------
 """
-path = "D:/pathological/DEA/response/dataset/missf_training.csv"
+path = "missf_training.csv"
 print(path)
 data = pd.read_csv(path ,header = 0,index_col = 0)
 genename = list(data.columns.values)[1:]
@@ -31,7 +31,7 @@ casename = list(data.index.values)
 #print(casename)
 genenumber = len(genename)
 print(genenumber)
-savepath = "D:/pathological/DEA/response/result/missf0911.csv"
+savepath = "missf0911.csv"
 
 # Create 2X2 contengency table
 gene_long=[]
@@ -39,7 +39,7 @@ gene_short=[]
 fold_change=[]
 for gene in genename:
     group0 = data.loc[data.loc[:,'RT_response']=='Non-response'][gene] #baseline
-    group1 = data.loc[data.loc[:,'RT_response']=='Response'][gene] #positive 分子
+    group1 = data.loc[data.loc[:,'RT_response']=='Response'][gene] #positive
     long = group0.mean()
     short = group1.mean()
     fold=short/long
@@ -59,7 +59,7 @@ for i in range(genenumber):
         if gene != genename[i]:
             for case in casename:
                 j=0
-                if data.loc[case,'RT_response']=='Non-response':   # 分母
+                if data.loc[case,'RT_response']=='Non-response':   #
                     x+=data[gene][case]
                     j = j+1
                 else:

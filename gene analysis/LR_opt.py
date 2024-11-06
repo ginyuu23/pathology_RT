@@ -75,15 +75,15 @@ def type(s):
     it = {b'Non-response':0, b'Response':1}
     return it[s]
 
-basepath = "D:/pathological/machine_learning_gene/response/dataset/selected/"
+basepath = "response/dataset/selected/"
 
-selection = "knn5"
+selection = "missf"
 
 trainfile = selection + "_training.txt"
 testfile = selection + "_test.txt"
 idfile = selection + "_test.csv"
 
-saveDir = "D:/pathological/machine_learning_gene/response/result/selected/" + selection + "/"
+saveDir = "response/result/selected/" + selection + "/"
 
 pathtrain = basepath + trainfile
 pathtest = basepath + testfile

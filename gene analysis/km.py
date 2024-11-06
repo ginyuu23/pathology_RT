@@ -2,7 +2,7 @@
 """
 Created on Mon Oct 23 14:09:32 2023
 
-@author: ariken
+@author: JinYu
 """
 
 from lifelines import KaplanMeierFitter
@@ -14,7 +14,7 @@ import matplotlib.font_manager
 import matplotlib.pyplot as plt
 import warnings; warnings.filterwarnings(action='ignore')
 
-#df = pd.read_csv("D:/pathological/machine_learning_image/kmtest.csv",header=0,index_col=0)
+#df = pd.read_csv("kmtest.csv",header=0,index_col=0)
 df = pd.read_csv("./km_test.csv",header=0,index_col=0)
 #df = pd.read_excel("./clinical_all.xlsx", sheet_name= "all_checked", header=0,index_col=0)
 
